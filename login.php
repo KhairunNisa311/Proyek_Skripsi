@@ -37,7 +37,7 @@
 					</div>
 				</div>
 				<div class="card-footer p-1 bg-white">
-					<span class="badge text-muted"><marquee>Sistem Pendukung Keputusan Perangkingan Skala PRioritas Pemenuhan Sarana Prasarana Destinasi Wisata Di Kabupaten Sumenep Menggunakan Metode Fuzzy AHP</marquee></span>
+					<span class="badge text-muted"><marquee>Sistem Pendukung Keputusan Perangkingan Skala Prioritas Pemenuhan Sarana Prasarana Destinasi Wisata Di Kabupaten Sumenep Menggunakan Metode Fuzzy AHP</marquee></span>
 				</div>
 			</div>
 		</div>

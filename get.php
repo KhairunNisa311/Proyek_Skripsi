@@ -1860,7 +1860,7 @@ function pembobotan(){
 	$data .='</div>';
 
 	$bobot = array();
-	$bobot['1.00'] = "Tidak Diperluka"; 
+	$bobot['1.00'] = "Tidak Diperlukan"; 
 	$bobot['2.00'] = "Sangat Baik"; 
 	$bobot['3.00'] = "Baik";
 	$bobot['4.00'] = "Cukup Baik";
@@ -2002,7 +2002,7 @@ function nilai(){
 function bobotnama($key){
 	
 	$idx = str_replace(".","",$key);
-	$bobot['1'] = "Tidak Diperluka"; 
+	$bobot['1'] = "Tidak Diperlukan"; 
 	$bobot['2'] = "Sangat Baik"; 
 	$bobot['3'] = "Baik";
 	$bobot['4'] = "Cukup Baik";
