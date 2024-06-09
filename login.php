@@ -5,7 +5,12 @@
 				<div class="card-header text-left shadow-sm p-3 mb-3 bg-white rounded">
 					<h4 class="text-info"> <i class="fa fa-lock"></i> LOGIN FORM </h4>
 				</div>
-				<div class="card-body">			
+				<div class="card-body">
+					<?php
+					if (isset($_GET['error'])) {
+						echo '<div style="color: red;">' . htmlspecialchars($_GET['error']) . '</div>';
+					}
+					?>
 					<div class="row justify-content-center mt-1 mb-2">		
 						<div class="col-12 col-sm-9">			
 							<form method="post" action="ceklogin.php">

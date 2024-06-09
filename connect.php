@@ -2,7 +2,7 @@
 	$host="localhost";
 	$user="root";
 	$password="";
-	$db="fahp_skripsi";
+	$db="fahp";
 	$con=mysqli_connect($host,$user,$password,$db) or die("Koneksi Gagal");
 ?>
 
