@@ -22,6 +22,6 @@
 			</div>
 		</div>					
 		<?php include($get.".php");?>	
-		<input type="hidden" id="txtlink" value="<?php echo $_REQUEST['get'] ?>">
+		<input type="hidden" id="txtlink" value="<?php echo $_REQUEST['get'] ?? '' ?>">
 	</div>
 </div>
