@@ -1860,11 +1860,11 @@ function pembobotan(){
 	$data .='</div>';
 
 	$bobot = array();
-	$bobot['1.00'] = "Tidak Diperlukan"; 
-	$bobot['2.00'] = "Sangat Baik"; 
-	$bobot['3.00'] = "Baik";
-	$bobot['4.00'] = "Cukup Baik";
-	$bobot['5.00'] = "Kurang";
+	$bobot['1.00'] = "Sangat Baik"; 
+	$bobot['2.00'] = "Baik"; 
+	$bobot['3.00'] = "Cukup";
+	$bobot['4.00'] = "Kurang ";
+	$bobot['5.00'] = "Sangat Kurang";
 	//$get_kriteria = getdata("kriteria");
 
 
@@ -1913,7 +1913,7 @@ function pembobotan(){
 	$o = 0;	
 	for($x = 0;$x < count($tbl[1]); $x++){
 		$data .="<tr><th class='bg-light text-secondary border-right border-bottom text-left'>".getnama('alternatif',$tbl[1][$x])."</th>";				
-		for($y = 0;$y < count($tbl[0]); $y++){									
+		for($y = 0;$y < count($nkriteries); $y++){									
 			$nnm = (empty($val[1][$tbl[1][$x]][$y]['nilai']))?['...','']:[$bobot[$val[1][$tbl[1][$x]][$y]['nilai']],$val[1][$tbl[1][$x]][$y]['nilai']];			
 			$cmb = '';
 			$cmb .= '<select id="X_'.$tbl[1][$x].'_'.$y.'" class="bg-light border text-dark text-center">';
@@ -1937,7 +1937,7 @@ function pembobotan(){
 	$data .= '<div class="col-11 text-center col-sm-9 errorinput">';
 	$data .='</div>';
 	$data .= '<div class="col-8 text-center col-sm-4">';
-	$jlh_idx = (count($tbl[0])-1);
+	$jlh_idx = (count($nkriteries)-1);
 	$data .= '<a class="btn btn-danger btn-block" href="javascript:_post(\''.$strkey.'\',\''.$jlh_idx.'\');">Lakukan Proses Perangkingan</a>';
 	$data .='</div>';
 	
@@ -1977,7 +1977,7 @@ function insertrecord($id,$str){
 }
 
 function nilai(){
-	error_reporting( error_reporting() & ~E_NOTICE );
+	error_reporting(0);
 	
 	$strnilai = $_REQUEST['strnilai'];
 	
@@ -2002,11 +2002,11 @@ function nilai(){
 function bobotnama($key){
 	
 	$idx = str_replace(".","",$key);
-	$bobot['1'] = "Tidak Diperlukan"; 
-	$bobot['2'] = "Sangat Baik"; 
-	$bobot['3'] = "Baik";
-	$bobot['4'] = "Cukup Baik";
-	$bobot['5'] = "Kurang";
+	$bobot['1'] = "Sangat Baik"; 
+	$bobot['2'] = "Baik"; 
+	$bobot['3'] = "Cukup";
+	$bobot['4'] = "Kurang";
+	$bobot['5'] = "Sangat Kurang";
 	
 	return $bobot[$idx];
 }

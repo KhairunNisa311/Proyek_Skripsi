@@ -136,7 +136,7 @@
 	}
 
 	function _post(d, x) {
-		//alert("ok")
+		//alert(d); return;
 		$(".errorinput").hide();
 		var str = d.split("MB");
 		var o = 0;
@@ -144,25 +144,35 @@
 		var _input_ = "";
 		var _status = "";
 		for (var r = 0; r < str.length; r++) {
+			console.log(r)
+			
 			var k = str[r].split("_");
 			for (var i = 0; i < k.length; i++) {
+				
 				_input_ = _input_ + k[i] + "__";
+				
 				for (var l = 0; l <= x; l++) {
 					var m = $("#X_" + k[i] + "_" + l).val();
-					if (m == "") {
+					
+					if (m==="") {
 						s = "1";
 					}
+						
 					_input_ = _input_ + m + "X";
 				}
 				_input_ = _input_ + "XXX";
+				
 			}
 			_input_ = _input_ + "LFC";
+			
 		}
-
-		if (s == "0") {
+	
+		console.log(_input_);
+		//return;
+		if (s === "0") {
 			var query = "get=nilai&strnilai=" + _input_;
-			//getajax("post", "get.php", query, 2);
-			getajax("get","get.php","get=fahp",0);
+			getajax("post", "get.php", query, 2);
+			//getajax("get","get.php","get=fahp",0);
 
 		} else {
 			$(".errorinput").show();
